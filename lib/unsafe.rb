@@ -27,3 +27,15 @@ Module.new do
 
   Array.prepend self
 end
+
+Module.new do
+  def [](...)
+    if Thread.current[:__unsafe]
+      Unsafe.string_aref(self, ...)
+    else
+      super
+    end
+  end
+
+  String.prepend self
+end

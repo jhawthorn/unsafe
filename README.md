@@ -21,3 +21,11 @@ $ irb
    See Crash Report log file in one of the following locations:
 ```
 
+```
+>> str = "hello, world"
+=> "hello, world"
+>> unsafe { str[-8, 8] }.unpack1("Q")
+=> 12
+>> str.length
+=> 12
+```
