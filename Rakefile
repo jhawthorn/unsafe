@@ -2,6 +2,7 @@
 
 require "bundler/gem_tasks"
 require "rake/extensiontask"
+require "minitest/test_task"
 
 task build: :compile
 
@@ -11,4 +12,6 @@ Rake::ExtensionTask.new("unsafe", GEMSPEC) do |ext|
   ext.lib_dir = "lib/unsafe"
 end
 
-task default: %i[clobber compile]
+Minitest::TestTask.create
+
+task default: %i[clobber compile test]
