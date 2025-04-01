@@ -33,3 +33,13 @@ $ irb
 >> str.length
 => 12
 ```
+
+## FAQ
+
+### Should I use this?
+
+Yes
+
+### My program keeps crashing
+
+`unsafe` works best when paired with [neversaydie](https://github.com/tenderlove/neversaydie)
