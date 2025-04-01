@@ -5,7 +5,7 @@ require_relative "lib/unsafe/version"
 Gem::Specification.new do |spec|
   spec.name = "unsafe"
   spec.version = Unsafe::VERSION
-  spec.authors = ["John Hawthorn"]
+  spec.authors = ["John \"Danger\" Hawthorn"]
   spec.email = ["john@hawthorn.email"]
 
   spec.summary = "unsafe {} blocks. Just like in Rust"

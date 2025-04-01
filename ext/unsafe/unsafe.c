@@ -6,6 +6,10 @@ VALUE array_aref(VALUE self, VALUE array, VALUE idx) {
     return RARRAY_PTR(array)[FIX2LONG(idx)];
 }
 
+VALUE array_aset(VALUE self, VALUE array, VALUE idx, VALUE value) {
+    return RARRAY_PTR(array)[FIX2LONG(idx)] = value;
+}
+
 VALUE string_aref(int argc, VALUE *argv, VALUE self) {
     long idx, len = 1;
     if (argc == 3) {
@@ -25,5 +29,6 @@ Init_unsafe(void)
   rb_mUnsafe = rb_define_module("Unsafe");
 
   rb_define_singleton_method(rb_mUnsafe, "array_aref", array_aref, 2);
+  rb_define_singleton_method(rb_mUnsafe, "array_aset", array_aset, 3);
   rb_define_singleton_method(rb_mUnsafe, "string_aref", string_aref, -1);
 }

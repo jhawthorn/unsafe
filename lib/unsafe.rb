@@ -25,6 +25,13 @@ Module.new do
     end
   end
 
+  def []=(...)
+    if Thread.current[:__unsafe]
+      Unsafe.array_aset(self, ...)
+    else
+      super
+    end
+  end
   Array.prepend self
 end
 
