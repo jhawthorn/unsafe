@@ -1,5 +1,9 @@
 # Unsafe
 
+Have you ever been annoyed that Ruby prevents you from accessing out of bounds elements from Strings or Arrays?
+
+`unsafe` unlocks the full potential of your Ruby programs by allowing accessing and modifying out of bounds memory!
+
 ```
 $ gem i unsafe
 $ irb
