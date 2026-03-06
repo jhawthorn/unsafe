@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "unsafe/version"
-require_relative "unsafe/unsafe"
+require "unsafe/unsafe"
 
 module Unsafe
 end
